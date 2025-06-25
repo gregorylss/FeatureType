@@ -37,9 +37,6 @@ use Thelia\Model\LangQuery;
  */
 class FeatureEditHook extends BaseHook
 {
-    /** @var ContainerInterface */
-    protected $container = null;
-
     /** @var TheliaFormFactory */
     protected $formFactory = null;
 
@@ -48,6 +45,7 @@ class FeatureEditHook extends BaseHook
      */
     public function __construct(ContainerInterface $container, TheliaFormFactory $formFactory)
     {
+        parent::__construct();
         $this->container = $container;
         $this->formFactory = $formFactory;
     }
